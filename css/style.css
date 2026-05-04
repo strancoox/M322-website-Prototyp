@@ -72,19 +72,21 @@ img {
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
+  padding-left: 0.5rem;
 }
 
 .logo {
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .site-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* ===== Navigation ===== */
@@ -102,6 +104,7 @@ img {
   display: flex;
   gap: 0.25rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-nav a {
@@ -456,106 +459,104 @@ main {
   border-top: 1px solid var(--rm-border);
 }
 
-/* ===== Geschichte ===== */
-.history-block {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 2.5rem;
-  margin: 3rem auto;
-  max-width: 1000px;
-  align-items: center;
+/* ===== Geschichte – Fliesstext-Artikel ===== */
+.history-article {
+  max-width: 780px;
+  margin: 3rem auto 4rem;
 }
 
-.history-block.reverse {
-  grid-template-columns: 1fr 1.5fr;
-}
-
-.history-block.reverse .history-image {
-  order: -1;
-}
-
-.history-block h2 {
-  color: var(--rm-navy);
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
+.history-title {
+  font-size: 2.2rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  color: var(--rm-navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.history-block p {
-  margin-bottom: 0.75rem;
+.history-lead {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--rm-text);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--rm-border);
+}
+
+.history-article p {
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--rm-text-soft);
+  margin-bottom: 1.25rem;
 }
 
-.history-image {
-  background-color: #f0f1f5;
+.history-chapter {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--rm-navy);
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 1rem;
+  clear: both;
+}
+
+.history-figure {
+  margin: 0.25rem 0 1.5rem;
   border-radius: var(--radius-lg);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 280px;
   overflow: hidden;
   border: 1px solid var(--rm-border);
+  background-color: #f0f1f5;
+  position: relative;
 }
 
-.history-image img {
+.history-figure.right {
+  float: right;
+  width: 42%;
+  margin-left: 2rem;
+}
+
+.history-figure.left {
+  float: left;
+  width: 42%;
+  margin-right: 2rem;
+}
+
+.history-figure img {
   width: 100%;
-  height: 100%;
+  height: 240px;
   object-fit: cover;
+  display: block;
 }
 
-.history-image .placeholder-label {
+.history-figure figcaption {
+  font-size: 0.82rem;
+  color: var(--rm-text-muted);
+  padding: 0.6rem 0.85rem;
+  background-color: var(--rm-surface);
+  border-top: 1px solid var(--rm-border);
+  line-height: 1.4;
+}
+
+.history-figure .placeholder-label {
   display: none;
   color: var(--rm-text-muted);
   font-size: 0.9rem;
   text-align: center;
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
-.history-image.image-placeholder img {
+.history-figure.image-placeholder img {
   display: none;
 }
 
-.history-image.image-placeholder .placeholder-label {
+.history-figure.image-placeholder .placeholder-label {
   display: block;
 }
 
-.milestones {
-  margin: 3rem auto;
-  max-width: 1000px;
-  background: var(--gradient-primary);
-  color: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: var(--radius-lg);
-}
-
-.milestones h2 {
-  color: #fff;
-  margin-bottom: 1.25rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.milestone-list {
-  list-style: none;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.milestone-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.milestone-list li:last-child {
-  border-bottom: none;
-}
-
-.milestone-list li strong {
-  color: #fff;
-  margin-right: 0.5rem;
+.history-article::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 /* ===== Über uns / Kontakt ===== */
@@ -705,6 +706,10 @@ main {
 }
 
 /* ===== Cookie Banner ===== */
+.cookie-banner[hidden] {
+  display: none !important;
+}
+
 .cookie-banner {
   position: fixed;
   bottom: 1rem;
@@ -791,13 +796,15 @@ main {
     padding: 0.75rem 1.5rem 1.25rem;
   }
 
-  .history-block,
-  .history-block.reverse {
-    grid-template-columns: 1fr;
+  .history-figure.right,
+  .history-figure.left {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.5rem;
   }
 
-  .history-block.reverse .history-image {
-    order: 0;
+  .history-title {
+    font-size: 1.65rem;
   }
 
   .intro h2 {
