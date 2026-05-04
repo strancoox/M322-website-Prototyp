@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Real Madrid CF Fanpage – Spielerprofile, Ausrüstung und Vereinsgeschichte." />
+  <title>Real Madrid CF – Kader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="images/logo.png" alt="Real Madrid CF Logo" class="logo" onerror="this.style.display='none'" />
+      <h1 class="site-title">Real Madrid CF</h1>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <h2>Der Kader 2025/26</h2>
+      <p>
+        Willkommen auf der inoffiziellen Fanpage von Real Madrid CF. Klicke auf einen Spieler,
+        um sein Profil mit Ausrüstung und Hintergrundinformationen zu öffnen.
+      </p>
+    </section>
+
+    <!-- Spielerkader wird via JS dynamisch eingefügt -->
+    <section id="kader" class="container"></section>
+  </main>
+
+  <!-- Modal für Spielerprofil -->
+  <div id="player-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-name">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Schließen" type="button">&times;</button>
+      <div class="modal-body">
+        <div class="modal-top">
+          <div class="modal-image-block">
+            <img id="modal-image" src="" alt="Spielerbild" />
+          </div>
+          <div class="modal-text-block">
+            <h2 id="modal-name">Name</h2>
+            <span class="modal-role" id="modal-role-tag">Position</span>
+            <p id="modal-description">Charakterbeschreibung</p>
+          </div>
+        </div>
+
+        <div class="modal-grid">
+          <div><strong>Position</strong><span id="modal-position"></span></div>
+          <div><strong>Rückennummer</strong><span id="modal-number"></span></div>
+          <div><strong>Alter</strong><span id="modal-age"></span></div>
+          <div><strong>Geburtsdatum</strong><span id="modal-birthday"></span></div>
+          <div><strong>Herkunft</strong><span id="modal-origin"></span></div>
+          <div><strong>Erfolge</strong><span id="modal-achievements"></span></div>
+        </div>
+
+        <div class="modal-equipment">
+          <h3>Ausrüstung</h3>
+          <p id="modal-equipment-text"></p>
+          <div id="modal-equipment-images" class="equipment-grid"></div>
+          <div id="modal-links" class="equipment-links"></div>
+        </div>
+
+        <p class="modal-update">Letztes Aktualisierungsdatum: <span id="modal-update"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <p>Diese Website verwendet Cookies. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <button id="cookie-accept" type="button">Akzeptieren</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Real Madrid CF Fanpage – inoffizielle Fanseite. Alex Stranc.</p>
+    </div>
+  </footer>
+
+  <script src="js/players.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

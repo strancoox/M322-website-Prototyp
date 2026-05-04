@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Madrid CF – Über uns</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="images/logo.png" alt="Real Madrid CF Logo" class="logo" onerror="this.style.display='none'" />
+      <h1 class="site-title">Über uns</h1>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="ueber-uns.html" class="active">Über uns</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+   <div class="container">
+    <section class="about">
+      <h2>Über diese Fanpage</h2>
+      <p>
+        Diese Website ist eine inoffizielle Fanseite, die Real-Madrid-Fans und
+        Fußballinteressierten zuverlässige Informationen über die Spieler, ihre
+        Karrieren und ihre Ausrüstung bieten möchte. Die Inhalte werden regelmäßig
+        aktualisiert.
+      </p>
+      <p>
+        Das Verhältnis der Inhalte liegt bei etwa 70 % Information und 30 %
+        Ausrüstung & Shop-Verlinkungen. Die Seite richtet sich an Fans im Alter
+        von ca. 15–40 Jahren, die digital aktiv sind und gerne mehr über Persönlichkeit,
+        Karriere und Ausstattung der Spieler erfahren möchten.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>Kontakt</h2>
+      <p>Hast du Fragen, Feedback oder einen Hinweis zu einem Spieler? Schreib mir gerne!</p>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          E-Mail
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Nachricht
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Nachricht senden</button>
+        <p id="form-status" class="form-status" hidden></p>
+      </form>
+
+      <div class="contact-info">
+        <h3>Direktkontakt</h3>
+        <p>E-Mail: <a href="mailto:fanpage@example.com">fanpage@example.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/realmadrid" target="_blank" rel="noopener noreferrer">@realmadrid</a></p>
+      </div>
+    </section>
+   </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Real Madrid CF Fanpage – inoffizielle Fanseite. Alex Stranc.</p>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <p>Diese Website verwendet Cookies. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <button id="cookie-accept" type="button">Akzeptieren</button>
+  </div>
+
+  <script src="js/cookie.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
