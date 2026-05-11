@@ -181,10 +181,10 @@ export const players: Player[] = [
     description:
       "Junges Ausnahmetalent. Box-to-Box-Spieler mit Torgefahr, Übersicht und Führungsstärke. Sofort zum Publikumsliebling geworden.",
     achievements: "La Liga, Copa del Rey, Champions League",
-    equipmentText: "Schuhe von Copa Pure (adidas).",
+    equipmentText: "Adidas Predator 25 Elite",
     equipmentImages: ["images/equipment/bellingham-boots.jpg"],
     links: [
-      { label: "adidas Copa Pure", url: "https://www.adidas.com/" },
+      { label: "Adidas Predator 25 Elite", url: "https://www.adidas.com/" },
       { label: "Instagram", url: "https://www.instagram.com/judebellingham/" }
     ],
     lastUpdated: "2026-05-04"
@@ -356,7 +356,7 @@ export const players: Player[] = [
     birthday: "1947-03-08",
     origin: "Spanien",
     description:
-      "Langjähriger Präsident von Real Madrid. Verantwortlich für die moderne „Galáctico"-Ära und den Bernabéu-Umbau.",
+      "Langjähriger Präsident von Real Madrid. Verantwortlich für die moderne Galáctico-Ära und den Bernabéu-Umbau.",
     achievements: "Mehrere Champions-League-Titel als Präsident, Bernabéu-Modernisierung",
     equipmentText: "Im Alltag im Anzug am Bernabéu.",
     equipmentImages: [],
