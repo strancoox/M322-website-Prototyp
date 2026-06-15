@@ -29,17 +29,20 @@
     card.setAttribute("tabindex", "0");
     card.setAttribute("aria-label", "Profil von " + player.name + " öffnen");
 
-    var imgWrap = document.createElement("div");
-    imgWrap.className = "player-card-image";
+    if (player.position !== "Staff") {
+      var imgWrap = document.createElement("div");
+      imgWrap.className = "player-card-image";
 
-    var img = document.createElement("img");
-    img.src = "images/players/" + player.id + ".jpg";
-    img.alt = player.name;
-    img.onerror = function () {
-      img.remove();
-      imgWrap.textContent = "Bild fehlt";
-    };
-    imgWrap.appendChild(img);
+      var img = document.createElement("img");
+      img.src = "images/players/" + player.id + ".jpg";
+      img.alt = player.name;
+      img.onerror = function () {
+        img.remove();
+        imgWrap.textContent = "Bild fehlt";
+      };
+      imgWrap.appendChild(img);
+      card.appendChild(imgWrap);
+    }
 
     var info = document.createElement("div");
     info.className = "player-card-info";
@@ -63,7 +66,6 @@
       info.appendChild(roleSpan);
     }
 
-    card.appendChild(imgWrap);
     card.appendChild(info);
 
     card.addEventListener("click", function () { openModal(player); });
