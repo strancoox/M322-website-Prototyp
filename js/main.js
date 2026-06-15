@@ -1,4 +1,4 @@
-/* Hauptlogik: Kader rendern + Modal öffnen
+/* Hauptlogik: Kader rendern + Modal öffnen + Hero-Slideshow
    Erwartet: window.PLAYERS aus players.js */
 (function () {
   var POSITION_ORDER = ["Tor", "Verteidigung", "Mittelfeld", "Angriff", "Staff"];
@@ -66,9 +66,7 @@
     card.appendChild(imgWrap);
     card.appendChild(info);
 
-    card.addEventListener("click", function () {
-      openModal(player);
-    });
+    card.addEventListener("click", function () { openModal(player); });
     card.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
@@ -85,9 +83,7 @@
     var players = window.PLAYERS || [];
 
     POSITION_ORDER.forEach(function (pos) {
-      var list = players.filter(function (p) {
-        return p.position === pos;
-      });
+      var list = players.filter(function (p) { return p.position === pos; });
       if (list.length === 0) return;
 
       var section = document.createElement("section");
@@ -101,9 +97,7 @@
       var grid = document.createElement("div");
       grid.className = "players-grid";
 
-      list.forEach(function (player) {
-        grid.appendChild(buildPlayerCard(player));
-      });
+      list.forEach(function (player) { grid.appendChild(buildPlayerCard(player)); });
 
       section.appendChild(grid);
       kaderEl.appendChild(section);
@@ -118,10 +112,7 @@
     setText("modal-role-tag", player.role || "");
     setText("modal-description", player.description);
     setText("modal-position", player.position);
-    setText(
-      "modal-number",
-      typeof player.number === "number" ? "#" + player.number : "—"
-    );
+    setText("modal-number", typeof player.number === "number" ? "#" + player.number : "—");
     setText("modal-age", calcAge(player.birthday) + " Jahre");
     setText("modal-birthday", formatDate(player.birthday));
     setText("modal-origin", player.origin);
@@ -129,33 +120,26 @@
     setText("modal-equipment-text", player.equipmentText);
     setText("modal-update", formatDate(player.lastUpdated));
 
-    // Spielerbild
     var imgEl = document.getElementById("modal-image");
     if (imgEl) {
       imgEl.style.display = "";
       imgEl.alt = player.name;
-      imgEl.onerror = function () {
-        imgEl.style.display = "none";
-      };
+      imgEl.onerror = function () { imgEl.style.display = "none"; };
       imgEl.src = "images/players/" + player.id + ".jpg";
     }
 
-    // Ausrüstungsbilder
     var equipGrid = document.getElementById("modal-equipment-images");
     if (equipGrid) {
       equipGrid.innerHTML = "";
       (player.equipmentImages || []).forEach(function (src) {
         var i = document.createElement("img");
         i.alt = player.name + " Ausrüstung";
-        i.onerror = function () {
-          i.remove();
-        };
+        i.onerror = function () { i.remove(); };
         i.src = src;
         equipGrid.appendChild(i);
       });
     }
 
-    // Links
     var linksEl = document.getElementById("modal-links");
     if (linksEl) {
       linksEl.innerHTML = "";
@@ -182,8 +166,52 @@
     document.body.style.overflow = "";
   }
 
+  /* === Slideshow mit Pfeil-Navigation === */
+  function initHeroSlideshow() {
+    var slidesContainer = document.getElementById("hero-slides");
+    if (!slidesContainer) return;
+
+    var slides = slidesContainer.querySelectorAll(".hero-slide");
+    if (slides.length < 2) return;
+
+    var prevBtn = document.getElementById("hero-prev");
+    var nextBtn = document.getElementById("hero-next");
+
+    var current = 0;
+    var intervalMs = 5000;
+    var timer = null;
+
+    function show(index) {
+      var idx = ((index % slides.length) + slides.length) % slides.length;
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.toggle("is-active", i === idx);
+      }
+      current = idx;
+    }
+
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+    function start() { stop(); timer = setInterval(next, intervalMs); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); start(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { prev(); start(); });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { prev(); start(); }
+      else if (e.key === "ArrowRight") { next(); start(); }
+    });
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    start();
+  }
+
   function init() {
     renderKader();
+    initHeroSlideshow();
 
     var modal = document.getElementById("player-modal");
     var closeBtn = document.querySelector(".modal-close");

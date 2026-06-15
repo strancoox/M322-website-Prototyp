@@ -1,23 +1,35 @@
-/* ====== Real Madrid Fanpage – Cleaner, modernes Redesign ====== */
-/* Inspiriert von realmadrid.com – Marineblau + Lila-Akzente, viel Weißraum */
+/* ====== Real Madrid Fanpage – Weiss-Basis mit kräftigen Blau-Akzenten + Gold ====== */
 
 :root {
-  --rm-navy: #00184a;       /* Tiefes Marineblau */
-  --rm-blue: #1d3a8a;       /* Royal Blue */
-  --rm-purple: #5b3aa6;     /* Lila-Akzent */
-  --rm-purple-light: #7b5fc7;
-  --rm-gold: #c9a24f;       /* gedämpftes Gold */
-  --rm-bg: #f7f8fa;
-  --rm-surface: #ffffff;
-  --rm-border: #e6e8ec;
-  --rm-text: #1a1d2b;
-  --rm-text-soft: #5a6079;
-  --rm-text-muted: #8a90a5;
+  /* === Drei verschiedene Blautöne === */
+  --rm-header: #001233;           /* Header (dunkelstes Blau) */
+  --rm-header-2: #1b2a5e;         /* Header Verlauf-Endpunkt */
+  --rm-nav: #0a1c44;              /* Navigation (mittleres Dunkelblau) */
+  --rm-blue-accent: #1d3a8a;      /* Akzent-Blau für Buttons/Borders */
+  --rm-blue-soft: #e8edf8;        /* Hellblau für sanfte Flächen */
 
-  --gradient-primary: linear-gradient(135deg, #00184a 0%, #2d2370 60%, #5b3aa6 100%);
-  --shadow-sm: 0 1px 2px rgba(15, 20, 50, 0.06);
-  --shadow-md: 0 4px 16px rgba(15, 20, 50, 0.08);
-  --shadow-lg: 0 12px 40px rgba(15, 20, 50, 0.18);
+  /* === Helle Basis === */
+  --rm-bg: #f4f6fb;               /* Body Hintergrund (sehr helles Blau-Grau) */
+  --rm-surface: #ffffff;          /* Karten / Sektionen */
+  --rm-border: #d8dde8;           /* Subtile Rahmen */
+  --rm-border-strong: #b6c0d4;    /* Sichtbarere Rahmen */
+
+  /* === Gold-Akzente === */
+  --rm-gold: #d4af37;
+  --rm-gold-bright: #f5c842;
+  --rm-gold-soft: rgba(212, 175, 55, 0.35);
+
+  /* === Text === */
+  --rm-text: #1a1d2b;
+  --rm-text-soft: #4a5273;
+  --rm-text-muted: #7d8aab;
+
+  --gradient-primary: linear-gradient(135deg, var(--rm-header) 0%, var(--rm-header-2) 100%);
+  --gradient-blue: linear-gradient(135deg, #001f5e 0%, #1d3a8a 100%);
+  --shadow-sm: 0 1px 2px rgba(15, 25, 60, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 25, 60, 0.1);
+  --shadow-lg: 0 14px 40px rgba(0, 18, 51, 0.25);
+  --shadow-blue: 0 6px 20px rgba(29, 58, 138, 0.2);
   --radius: 10px;
   --radius-lg: 16px;
   --font: 'Inter', 'Segoe UI', Roboto, -apple-system, system-ui, sans-serif;
@@ -42,13 +54,13 @@ body {
 }
 
 a {
-  color: var(--rm-purple);
+  color: var(--rm-blue-accent);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--rm-navy);
+  color: var(--rm-header);
 }
 
 img {
@@ -67,6 +79,7 @@ img {
   background: var(--gradient-primary);
   color: #fff;
   padding: 1.25rem 0;
+  border-bottom: 3px solid var(--rm-gold);
 }
 
 .header-inner {
@@ -87,12 +100,13 @@ img {
   font-size: 1.9rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  color: #fff;
 }
 
 /* ===== Navigation ===== */
 .main-nav {
-  background-color: var(--rm-surface);
-  border-bottom: 1px solid var(--rm-border);
+  background-color: var(--rm-nav);
+  border-bottom: 1px solid var(--rm-header);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -109,38 +123,160 @@ img {
 
 .main-nav a {
   display: inline-block;
-  color: var(--rm-text-soft);
+  color: rgba(255, 255, 255, 0.78);
   font-weight: 500;
   font-size: 0.95rem;
   padding: 1rem 1.1rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
+  border-bottom: 3px solid transparent;
+  transform-origin: center bottom;
+  transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
 .main-nav a:hover {
-  color: var(--rm-purple);
+  color: var(--rm-gold-bright);
+  transform: scale(1.15);
 }
 
 .main-nav a.active {
-  color: var(--rm-navy);
-  border-bottom-color: var(--rm-purple);
+  color: #fff;
+  border-bottom-color: var(--rm-gold);
 }
 
-/* ===== Main / Intro ===== */
+.main-nav a.active:hover {
+  transform: scale(1.15);
+}
+
+/* ===== Main ===== */
 main {
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 0 0 4rem;
   min-height: 60vh;
 }
 
+/* ===== Hero / Slideshow auf Startseite ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 55vh, 600px);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  background-color: var(--rm-header);
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;          /* füllt volle Breite, schneidet oben/unten leicht ab */
+  background-repeat: no-repeat;
+  background-position: center 15%; /* zeigt noch mehr vom oberen Bereich, schneidet unten stärker ab */
+  background-color: var(--rm-header);
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 18, 51, 0.4) 0%,
+    rgba(0, 18, 51, 0.55) 60%,
+    rgba(0, 18, 51, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.hero-content p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 680px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Slideshow-Pfeile (links/rechts) */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(0, 18, 51, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero-arrow:hover,
+.hero-arrow:focus-visible {
+  background-color: var(--rm-gold);
+  color: var(--rm-header);
+  border-color: var(--rm-gold);
+  transform: translateY(-50%) scale(1.12);
+  outline: none;
+}
+
+.hero-arrow-prev { left: 1rem; }
+.hero-arrow-next { right: 1rem; }
+
+@media (max-width: 480px) {
+  .hero-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+  .hero-arrow-prev { left: 0.5rem; }
+  .hero-arrow-next { right: 0.5rem; }
+}
+
+/* Intro (Fallback für Seiten ohne Hero) */
 .intro {
   max-width: 760px;
-  margin: 0 auto 3rem;
+  margin: 2.5rem auto 3rem;
   text-align: center;
+  padding: 0 1.5rem;
 }
 
 .intro h2 {
   font-size: 2rem;
-  color: var(--rm-navy);
+  color: var(--rm-header);
   margin-bottom: 0.75rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -155,28 +291,32 @@ main {
 .position-section {
   margin: 3rem auto;
   max-width: 1180px;
+  padding: 0 1.5rem;
 }
 
 .position-title {
-  font-size: 1.1rem;
-  color: var(--rm-text-muted);
+  font-size: 1.15rem;
+  color: var(--rm-header);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 600;
+  letter-spacing: 0.18em;
+  font-weight: 700;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--rm-border);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--rm-gold);
+  display: inline-block;
+  padding-right: 1.5rem;
 }
 
 .players-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .player-card {
   background-color: var(--rm-surface);
   border: 1px solid var(--rm-border);
+  border-top: 3px solid var(--rm-blue-accent);
   border-radius: var(--radius);
   cursor: pointer;
   overflow: hidden;
@@ -187,17 +327,17 @@ main {
 
 .player-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--rm-purple-light);
+  box-shadow: var(--shadow-blue);
+  border-top-color: var(--rm-gold);
 }
 
 .player-card:focus-visible {
-  outline: 2px solid var(--rm-purple);
+  outline: 2px solid var(--rm-blue-accent);
   outline-offset: 2px;
 }
 
 .player-card-image {
-  background: linear-gradient(180deg, #f0f1f5 0%, #e3e6ed 100%);
+  background: linear-gradient(180deg, #e8edf8 0%, #d4dcec 100%);
   aspect-ratio: 3 / 4;
   display: flex;
   align-items: center;
@@ -214,26 +354,27 @@ main {
 }
 
 .player-card-info {
-  padding: 0.85rem 0.9rem 1rem;
+  padding: 0.95rem 0.9rem 1rem;
   background-color: var(--rm-surface);
   position: relative;
 }
 
 .player-card-info .number {
   position: absolute;
-  top: -14px;
+  top: -16px;
   right: 12px;
-  background: var(--gradient-primary);
-  color: #fff;
+  background: var(--gradient-blue);
+  color: var(--rm-gold);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-md);
+  border: 2px solid var(--rm-surface);
 }
 
 .player-card-info .name {
@@ -253,7 +394,7 @@ main {
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 8, 30, 0.55);
+  background-color: rgba(0, 18, 51, 0.6);
   backdrop-filter: blur(4px);
   display: none;
   align-items: flex-start;
@@ -290,7 +431,7 @@ main {
   position: absolute;
   top: 12px;
   right: 14px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--rm-border);
   width: 36px;
   height: 36px;
@@ -307,9 +448,9 @@ main {
 }
 
 .modal-close:hover {
-  background: var(--rm-purple);
-  color: #fff;
-  border-color: var(--rm-purple);
+  background: var(--rm-header);
+  color: var(--rm-gold);
+  border-color: var(--rm-header);
   transform: rotate(90deg);
 }
 
@@ -323,10 +464,11 @@ main {
   gap: 0;
   background: var(--gradient-primary);
   color: #fff;
+  border-bottom: 3px solid var(--rm-gold);
 }
 
 .modal-image-block {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,22 +491,22 @@ main {
   font-weight: 700;
   margin-bottom: 0.4rem;
   letter-spacing: -0.01em;
+  color: #fff;
 }
 
 .modal-text-block .modal-role {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  padding: 0.25rem 0.75rem;
+  background: var(--rm-gold);
+  color: var(--rm-header);
+  padding: 0.25rem 0.8rem;
   border-radius: 999px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .modal-text-block #modal-description {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.6;
 }
 
@@ -388,8 +530,8 @@ main {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--rm-text-muted);
-  font-weight: 600;
+  color: var(--rm-blue-accent);
+  font-weight: 700;
 }
 
 .modal-grid div span {
@@ -399,13 +541,14 @@ main {
 
 .modal-equipment {
   padding: 1.5rem 2rem;
+  background-color: var(--rm-blue-soft);
 }
 
 .modal-equipment h3 {
-  color: var(--rm-navy);
+  color: var(--rm-header);
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .modal-equipment p {
@@ -425,7 +568,7 @@ main {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
-  background-color: #f0f1f5;
+  background-color: var(--rm-surface);
   border: 1px solid var(--rm-border);
 }
 
@@ -437,18 +580,21 @@ main {
 }
 
 .equipment-links a {
-  background-color: var(--rm-navy);
+  background: var(--gradient-blue);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 500;
-  transition: background 0.15s;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .equipment-links a:hover {
-  background-color: var(--rm-purple);
+  background: var(--rm-gold);
+  color: var(--rm-header);
   text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .modal-update {
@@ -457,18 +603,25 @@ main {
   text-align: right;
   padding: 0.75rem 2rem 1.25rem;
   border-top: 1px solid var(--rm-border);
+  background-color: var(--rm-surface);
 }
 
 /* ===== Geschichte – Fliesstext-Artikel ===== */
 .history-article {
   max-width: 780px;
   margin: 3rem auto 4rem;
+  background-color: var(--rm-surface);
+  padding: 2.5rem 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--rm-border);
+  border-top: 4px solid var(--rm-blue-accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .history-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--rm-navy);
+  color: var(--rm-header);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -481,7 +634,7 @@ main {
   font-weight: 500;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid var(--rm-border);
+  border-bottom: 2px solid var(--rm-gold-soft);
 }
 
 .history-article p {
@@ -494,7 +647,7 @@ main {
 .history-chapter {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--rm-navy);
+  color: var(--rm-blue-accent);
   letter-spacing: -0.01em;
   margin: 2.5rem 0 1rem;
   clear: both;
@@ -505,7 +658,7 @@ main {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--rm-border);
-  background-color: #f0f1f5;
+  background-color: var(--rm-blue-soft);
   position: relative;
 }
 
@@ -564,18 +717,24 @@ main {
 .contact {
   background-color: var(--rm-surface);
   border: 1px solid var(--rm-border);
+  border-top: 4px solid var(--rm-blue-accent);
   padding: 2rem 2.25rem;
   border-radius: var(--radius-lg);
   margin: 0 auto 1.5rem;
   max-width: 800px;
+  box-shadow: var(--shadow-sm);
 }
 
 .about h2,
 .contact h2 {
-  color: var(--rm-navy);
+  color: var(--rm-header);
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--rm-gold);
+  display: inline-block;
+  padding-right: 1.5rem;
 }
 
 .about p,
@@ -604,9 +763,9 @@ main {
   font-family: inherit;
   font-size: 0.95rem;
   padding: 0.65rem 0.85rem;
-  border: 1px solid var(--rm-border);
+  border: 1px solid var(--rm-border-strong);
   border-radius: var(--radius);
-  background-color: var(--rm-bg);
+  background-color: var(--rm-surface);
   color: var(--rm-text);
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -614,42 +773,43 @@ main {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--rm-purple);
-  box-shadow: 0 0 0 3px rgba(91, 58, 166, 0.15);
-  background-color: var(--rm-surface);
+  border-color: var(--rm-blue-accent);
+  box-shadow: 0 0 0 3px rgba(29, 58, 138, 0.15);
 }
 
 .contact-form button,
 .btn-secondary {
-  background: var(--gradient-primary);
+  background: var(--gradient-blue);
   color: #fff;
   border: none;
   padding: 0.7rem 1.6rem;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: opacity 0.15s, transform 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
   width: max-content;
 }
 
 .contact-form button:hover,
 .btn-secondary:hover {
-  opacity: 0.92;
   transform: translateY(-1px);
+  box-shadow: var(--shadow-blue);
 }
 
 .form-status {
   padding: 0.6rem 1rem;
   border-radius: var(--radius);
-  background-color: #e8f5ee;
-  color: #136133;
+  background-color: #e6f4ea;
+  color: #156c2c;
   font-size: 0.9rem;
+  border: 1px solid #b3d9be;
 }
 
 .form-status.error {
-  background-color: #fcebec;
-  color: #9a2129;
+  background-color: #fdecea;
+  color: #a02020;
+  border-color: #f3b1ad;
 }
 
 .contact-info {
@@ -659,7 +819,7 @@ main {
 }
 
 .contact-info h3 {
-  color: var(--rm-navy);
+  color: var(--rm-header);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -668,25 +828,32 @@ main {
 .legal {
   max-width: 800px;
   margin: 0 auto;
+  padding: 2.5rem 1.5rem 0;
 }
 
 .legal section {
   background-color: var(--rm-surface);
   border: 1px solid var(--rm-border);
+  border-top: 4px solid var(--rm-blue-accent);
   padding: 1.75rem 2rem;
   border-radius: var(--radius-lg);
   margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .legal h2 {
-  color: var(--rm-navy);
+  color: var(--rm-header);
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--rm-gold);
+  display: inline-block;
+  padding-right: 1rem;
 }
 
 .legal h3 {
-  color: var(--rm-navy);
+  color: var(--rm-blue-accent);
   margin-top: 1.25rem;
   margin-bottom: 0.4rem;
   font-size: 1rem;
@@ -717,9 +884,10 @@ main {
   right: 1rem;
   max-width: 720px;
   margin: 0 auto;
-  background-color: var(--rm-navy);
+  background-color: var(--rm-header);
   color: #fff;
   padding: 1rem 1.25rem;
+  border: 1px solid var(--rm-gold);
   border-radius: var(--radius);
   display: flex;
   justify-content: space-between;
@@ -732,15 +900,15 @@ main {
 }
 
 .cookie-banner a {
-  color: var(--rm-purple-light);
+  color: var(--rm-gold-bright);
 }
 
 .cookie-banner button {
-  background-color: var(--rm-purple);
-  color: #fff;
+  background-color: var(--rm-gold);
+  color: var(--rm-header);
   border: none;
   padding: 0.5rem 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--radius);
   cursor: pointer;
   transition: background 0.15s;
@@ -748,17 +916,18 @@ main {
 }
 
 .cookie-banner button:hover {
-  background-color: var(--rm-purple-light);
+  background-color: var(--rm-gold-bright);
 }
 
 /* ===== Footer ===== */
 .site-footer {
-  background-color: var(--rm-navy);
-  color: rgba(255, 255, 255, 0.75);
+  background-color: var(--rm-header);
+  color: rgba(255, 255, 255, 0.78);
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
   margin-top: 4rem;
   font-size: 0.85rem;
+  border-top: 3px solid var(--rm-gold);
 }
 
 /* ===== Responsive ===== */
@@ -770,6 +939,10 @@ main {
   .main-nav a {
     padding: 0.85rem 0.7rem;
     font-size: 0.9rem;
+  }
+
+  .hero {
+    height: clamp(360px, 65vh, 520px);
   }
 
   .modal-top {
@@ -794,6 +967,10 @@ main {
 
   .modal-update {
     padding: 0.75rem 1.5rem 1.25rem;
+  }
+
+  .history-article {
+    padding: 1.75rem 1.5rem;
   }
 
   .history-figure.right,

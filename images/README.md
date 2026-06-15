@@ -16,7 +16,20 @@ images/logo.png                       (60 × 60 px, transparenter Hintergrund)
 
 ---
 
-## 2. Spielerbilder
+## 2. Hero-Slideshow (Startseite)
+
+Diese drei Bilder rotieren als Hintergrund hinter dem „Kader 2025/26"-Titel.
+Empfohlen: ca. 1600 × 900 px (Querformat), JPG.
+
+```
+images/hero/bernabeu.jpg              (Bernabéu-Stadion)
+images/hero/mbappe.jpg                (Mbappé Jubel)
+images/hero/bellingham.jpg            (Bellingham Jubel)
+```
+
+---
+
+## 3. Spielerbilder
 
 Format: `images/players/<id>.jpg` – quadratisch oder Hochformat 3:4.
 Empfohlen: 600 × 800 px.

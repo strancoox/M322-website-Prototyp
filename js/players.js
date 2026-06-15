@@ -13,7 +13,7 @@ window.PLAYERS = [
     origin: "Belgien",
     description:
       "Einer der besten Torhüter der Welt. Bekannt für seine Reflexe, Größe und Ruhe in entscheidenden Spielen. Entscheidender Faktor beim CL-Sieg 2022.",
-    achievements: "Champions League, La Liga, Copa del Rey, Yashin Trophy 2022",
+    achievements: "3× La Liga, 2× Champions League, 1× Copa del Rey, 4× Spanischer Supercup, 2× UEFA Super Cup, 1× Klub-WM, Yashin Trophy 2022",
     equipmentText: "Torwarthandschuhe und Schuhe von adidas.",
     equipmentImages: [
       "images/equipment/courtois-handschuhe.jpg",
@@ -23,7 +23,7 @@ window.PLAYERS = [
       { label: "adidas Predator", url: "https://www.adidas.com/" },
       { label: "Instagram", url: "https://www.instagram.com/thibautcourtois/" }
     ],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
   {
     id: "lunin",
@@ -35,30 +35,14 @@ window.PLAYERS = [
     origin: "Ukraine",
     description:
       "Junger, talentierter Torhüter mit hervorragender Spielintelligenz. Übernahm in der CL-Saison 23/24 wichtige Spiele.",
-    achievements: "Champions League, La Liga",
+    achievements: "3× La Liga, 2× Champions League, 1× Copa del Rey, 4× Spanischer Supercup",
     equipmentText: "Handschuhe von Nike.",
     equipmentImages: ["images/equipment/lunin-handschuhe.jpg"],
     links: [{ label: "Nike Goalkeeper", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
 
   // ===== VERTEIDIGUNG =====
-  {
-    id: "carvajal",
-    name: "Daniel Carvajal",
-    position: "Verteidigung",
-    role: "Rechtsverteidiger",
-    number: 2,
-    birthday: "1992-01-11",
-    origin: "Spanien",
-    description:
-      "Erfahrener Rechtsverteidiger und Kapitän. Bekannt für Offensivdrang und Erfahrung in entscheidenden Champions-League-Finals.",
-    achievements: "6× Champions League, mehrere La-Liga-Titel, Europameister 2024",
-    equipmentText: "Schuhe von adidas Predator.",
-    equipmentImages: ["images/equipment/carvajal-boots.jpg"],
-    links: [{ label: "adidas Predator", url: "https://www.adidas.com/" }],
-    lastUpdated: "2026-05-04"
-  },
   {
     id: "militao",
     name: "Éder Militão",
@@ -69,59 +53,59 @@ window.PLAYERS = [
     origin: "Brasilien",
     description:
       "Schneller, kopfballstarker Innenverteidiger. Wichtiger Stabilisator in der Defensive.",
-    achievements: "Champions League, La Liga, Copa America",
+    achievements: "2× Champions League, 3× La Liga, 1× Copa del Rey, Copa América 2019 mit Brasilien",
     equipmentText: "Schuhe von Nike Mercurial.",
     equipmentImages: ["images/equipment/militao-boots.jpg"],
     links: [{ label: "Nike Mercurial", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
   {
-    id: "ruediger",
-    name: "Antonio Rüdiger",
+    id: "trent",
+    name: "Trent Alexander-Arnold",
+    position: "Verteidigung",
+    role: "Rechtsverteidiger",
+    number: 12,
+    birthday: "1998-10-07",
+    origin: "England",
+    description:
+      "Weltklasse-Rechtsverteidiger mit außergewöhnlicher Passqualität und Spielaufbau. Wechselte 2025 von Liverpool zu Real Madrid.",
+    achievements: "1× Champions League (Liverpool 2019), 1× Premier League (2020), 1× FA Cup, 1× League Cup, 1× Klub-WM",
+    equipmentText: "Schuhe von Under Armour.",
+    equipmentImages: [],
+    links: [{ label: "Instagram", url: "https://www.instagram.com/trentarnold66/" }],
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "asencio",
+    name: "Raúl Asencio",
     position: "Verteidigung",
     role: "Innenverteidiger",
-    number: 22,
-    birthday: "1993-03-03",
-    origin: "Deutschland",
+    number: 17,
+    birthday: "2003-09-22",
+    origin: "Spanien",
     description:
-      "Kompromissloser Verteidiger mit Führungsqualitäten. Berühmt für seine Zweikampfstärke und Torgefahr im Strafraum.",
-    achievements: "Champions League, La Liga, FA Cup",
-    equipmentText: "Schuhe von adidas X.",
-    equipmentImages: ["images/equipment/ruediger-boots.jpg"],
-    links: [{ label: "adidas X Crazyfast", url: "https://www.adidas.com/" }],
-    lastUpdated: "2026-05-04"
+      "Junger Innenverteidiger aus der eigenen Jugend. Überzeugte mit Ruhe am Ball und gutem Stellungsspiel in seinen ersten Profieinsätzen.",
+    achievements: "Aufstieg aus Real Madrid Castilla in den Profikader 2024/25",
+    equipmentText: "Schuhe von Nike.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
   },
   {
-    id: "alaba",
-    name: "David Alaba",
-    position: "Verteidigung",
-    role: "Innenverteidiger",
-    number: 4,
-    birthday: "1992-06-24",
-    origin: "Österreich",
-    description:
-      "Vielseitiger Defensivspieler mit großer Erfahrung. Spielintelligenz und ruhiger Aufbau zeichnen ihn aus.",
-    achievements: "Champions League, La Liga, Bundesliga",
-    equipmentText: "Schuhe von Nike Phantom.",
-    equipmentImages: ["images/equipment/alaba-boots.jpg"],
-    links: [{ label: "Nike Phantom", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
-  },
-  {
-    id: "mendy",
-    name: "Ferland Mendy",
+    id: "carreras",
+    name: "Álvaro Fernández Carreras",
     position: "Verteidigung",
     role: "Linksverteidiger",
-    number: 23,
-    birthday: "1995-06-08",
-    origin: "Frankreich",
+    number: 18,
+    birthday: "2003-07-21",
+    origin: "Spanien",
     description:
-      "Schneller, defensivstarker Linksverteidiger. Sehr robust im Eins-gegen-Eins.",
-    achievements: "Champions League, La Liga",
-    equipmentText: "Schuhe von Nike Mercurial.",
-    equipmentImages: ["images/equipment/mendy-boots.jpg"],
-    links: [{ label: "Nike Mercurial", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+      "Offensivstarker Linksverteidiger mit guter Flanke. Kam über Benfica und Manchester United zu Real Madrid.",
+    achievements: "Benfica: Teilnahme Champions League 2024/25",
+    equipmentText: "Schuhe von adidas.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
   },
   {
     id: "fran-garcia",
@@ -133,11 +117,59 @@ window.PLAYERS = [
     origin: "Spanien",
     description:
       "Wendiger Linksverteidiger mit guter Offensive. Spielt seit der Rückkehr aus Vallecano für Real Madrid.",
-    achievements: "La Liga",
+    achievements: "2× La Liga, 1× Champions League (2024), 1× Spanischer Supercup",
     equipmentText: "Schuhe von Nike.",
     equipmentImages: ["images/equipment/fran-garcia-boots.jpg"],
     links: [{ label: "Nike Tiempo", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "ruediger",
+    name: "Antonio Rüdiger",
+    position: "Verteidigung",
+    role: "Innenverteidiger",
+    number: 22,
+    birthday: "1993-03-03",
+    origin: "Deutschland",
+    description:
+      "Kompromissloser Verteidiger mit Führungsqualitäten. Berühmt für seine Zweikampfstärke und Torgefahr im Strafraum.",
+    achievements: "1× Champions League mit Real (2024), 2× La Liga, 1× Copa del Rey, zusätzlich 1× CL (Chelsea 2021), 1× FA Cup, 1× Klub-WM",
+    equipmentText: "Schuhe von adidas X.",
+    equipmentImages: ["images/equipment/ruediger-boots.jpg"],
+    links: [{ label: "adidas X Crazyfast", url: "https://www.adidas.com/" }],
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "mendy",
+    name: "Ferland Mendy",
+    position: "Verteidigung",
+    role: "Linksverteidiger",
+    number: 23,
+    birthday: "1995-06-08",
+    origin: "Frankreich",
+    description:
+      "Schneller, defensivstarker Linksverteidiger. Sehr robust im Eins-gegen-Eins.",
+    achievements: "2× Champions League (2022, 2024), 3× La Liga, 1× Copa del Rey",
+    equipmentText: "Schuhe von Nike Mercurial.",
+    equipmentImages: ["images/equipment/mendy-boots.jpg"],
+    links: [{ label: "Nike Mercurial", url: "https://www.nike.com/" }],
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "huijsen",
+    name: "Dean Huijsen",
+    position: "Verteidigung",
+    role: "Innenverteidiger",
+    number: 24,
+    birthday: "2005-04-12",
+    origin: "Spanien / Niederlande",
+    description:
+      "Großgewachsener, junger Innenverteidiger mit starkem Kopfballspiel. Kam über Juventus und Bournemouth zu Real Madrid.",
+    achievements: "AS Rom: Serie A Erfahrung (Leihe), Bournemouth: Premier League 2024/25",
+    equipmentText: "Schuhe von Nike.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
   },
 
   // ===== MITTELFELD =====
@@ -151,46 +183,14 @@ window.PLAYERS = [
     origin: "England",
     description:
       "Junges Ausnahmetalent. Box-to-Box-Spieler mit Torgefahr, Übersicht und Führungsstärke. Sofort zum Publikumsliebling geworden.",
-    achievements: "La Liga, Copa del Rey, Champions League",
+    achievements: "2× La Liga (2024, 2025), 1× Champions League (2024), 1× Copa del Rey, 1× Spanischer Supercup",
     equipmentText: "Adidas Predator 25 Elite",
     equipmentImages: ["images/equipment/bellingham-boots.jpg"],
     links: [
       { label: "Adidas Predator 25 Elite", url: "https://www.adidas.com/" },
       { label: "Instagram", url: "https://www.instagram.com/judebellingham/" }
     ],
-    lastUpdated: "2026-05-04"
-  },
-  {
-    id: "valverde",
-    name: "Federico Valverde",
-    position: "Mittelfeld",
-    role: "Box-to-Box / Außen",
-    number: 15,
-    birthday: "1998-07-22",
-    origin: "Uruguay",
-    description:
-      "Laufstarker Allrounder mit hartem Schuss. Wichtiger Kämpfer im Mittelfeld und Notlösung als Rechtsverteidiger.",
-    achievements: "Champions League, La Liga, Copa America",
-    equipmentText: "Schuhe von adidas Predator.",
-    equipmentImages: ["images/equipment/valverde-boots.jpg"],
-    links: [{ label: "adidas Predator", url: "https://www.adidas.com/" }],
-    lastUpdated: "2026-05-04"
-  },
-  {
-    id: "tchouameni",
-    name: "Aurélien Tchouaméni",
-    position: "Mittelfeld",
-    role: "Defensiver Mittelfeldspieler",
-    number: 14,
-    birthday: "2000-01-27",
-    origin: "Frankreich",
-    description:
-      "Dynamischer Sechser mit Übersicht und Zweikampfstärke. Kann auch in der Innenverteidigung aushelfen.",
-    achievements: "Champions League, La Liga",
-    equipmentText: "Schuhe von Nike Phantom.",
-    equipmentImages: ["images/equipment/tchouameni-boots.jpg"],
-    links: [{ label: "Nike Phantom", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
   {
     id: "camavinga",
@@ -202,27 +202,91 @@ window.PLAYERS = [
     origin: "Frankreich",
     description:
       "Technisch starker, sehr beweglicher Mittelfeldspieler. Auch als Linksverteidiger einsetzbar.",
-    achievements: "Champions League, La Liga",
+    achievements: "3× Champions League (2022, 2024), 3× La Liga, 1× Copa del Rey",
     equipmentText: "Schuhe von Nike Mercurial.",
     equipmentImages: ["images/equipment/camavinga-boots.jpg"],
     links: [{ label: "Nike Mercurial", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "valverde",
+    name: "Federico Valverde",
+    position: "Mittelfeld",
+    role: "Box-to-Box / Außen",
+    number: 8,
+    birthday: "1998-07-22",
+    origin: "Uruguay",
+    description:
+      "Laufstarker Allrounder mit hartem Schuss. Wichtiger Kämpfer im Mittelfeld und Notlösung als Rechtsverteidiger.",
+    achievements: "2× Champions League (2022, 2024), 4× La Liga, 1× Copa del Rey, Copa América 2024 (Finalist)",
+    equipmentText: "Schuhe von adidas Predator.",
+    equipmentImages: ["images/equipment/valverde-boots.jpg"],
+    links: [{ label: "adidas Predator", url: "https://www.adidas.com/" }],
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "tchouameni",
+    name: "Aurélien Tchouaméni",
+    position: "Mittelfeld",
+    role: "Defensiver Mittelfeldspieler",
+    number: 14,
+    birthday: "2000-01-27",
+    origin: "Frankreich",
+    description:
+      "Dynamischer Sechser mit Übersicht und Zweikampfstärke. Kann auch in der Innenverteidigung aushelfen.",
+    achievements: "2× Champions League (2022, 2024), 2× La Liga, 1× Spanischer Supercup",
+    equipmentText: "Schuhe von Nike Phantom.",
+    equipmentImages: ["images/equipment/tchouameni-boots.jpg"],
+    links: [{ label: "Nike Phantom", url: "https://www.nike.com/" }],
+    lastUpdated: "2026-06-15"
   },
   {
     id: "guler",
     name: "Arda Güler",
     position: "Mittelfeld",
     role: "Offensiver Mittelfeldspieler",
-    number: 24,
+    number: 15,
     birthday: "2005-02-25",
     origin: "Türkei",
     description:
       "Hochbegabter junger Spielmacher mit feiner Technik und gutem linken Fuß. Zukunftshoffnung für Real Madrid.",
-    achievements: "La Liga",
+    achievements: "2× La Liga, 1× Champions League (2024), Türkischer Pokal 2023 (Fenerbahçe)",
     equipmentText: "Schuhe von Nike Phantom.",
     equipmentImages: ["images/equipment/guler-boots.jpg"],
     links: [{ label: "Nike Phantom", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "ceballos",
+    name: "Dani Ceballos",
+    position: "Mittelfeld",
+    role: "Zentraler Mittelfeldspieler",
+    number: 19,
+    birthday: "1996-08-07",
+    origin: "Spanien",
+    description:
+      "Technisch versierter Mittelfeldspieler mit exzellenter Ballkontrolle. Kehrte nach Leihen bei Arsenal zurück und etablierte sich im Kader.",
+    achievements: "2× Champions League (2022, 2024), 2× La Liga, 1× Copa del Rey, U21-EM 2019 (MVP)",
+    equipmentText: "Schuhe von Nike.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "brahim",
+    name: "Brahim Díaz",
+    position: "Mittelfeld",
+    role: "Offensiver Mittelfeldspieler",
+    number: 21,
+    birthday: "1999-08-03",
+    origin: "Marokko / Spanien",
+    description:
+      "Kreativer Offensivspieler mit feinem Dribbling. Bewies sich bei AC Mailand und kehrte gestärkt zu Real Madrid zurück.",
+    achievements: "1× Champions League (2024), 2× La Liga, 1× Serie A (AC Mailand 2022), WM-Halbfinale 2022 mit Marokko",
+    equipmentText: "Schuhe von Nike.",
+    equipmentImages: [],
+    links: [{ label: "Instagram", url: "https://www.instagram.com/brahimdiaz/" }],
+    lastUpdated: "2026-06-15"
   },
 
   // ===== ANGRIFF =====
@@ -236,7 +300,7 @@ window.PLAYERS = [
     origin: "Brasilien",
     description:
       "Einer der besten Dribbler der Welt. Schnell, kreativ und torgefährlich. Spielentscheidender Spieler im CL-Finale 2022.",
-    achievements: "Champions League, La Liga, FIFA-Welttorhüter-Awards",
+    achievements: "3× Champions League (2018, 2022, 2024), 4× La Liga, 1× Copa del Rey, FIFA The Best 2024 (Finalist), Ballon d'Or 2024 (2. Platz)",
     equipmentText: "Schuhe von Nike Mercurial – Spezial-Edition für Vinícius.",
     equipmentImages: [
       "images/equipment/vinicius-boots.jpg",
@@ -246,19 +310,19 @@ window.PLAYERS = [
       { label: "Nike Mercurial Vinícius", url: "https://www.nike.com/" },
       { label: "Instagram", url: "https://www.instagram.com/vinijr/" }
     ],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
   {
     id: "mbappe",
     name: "Kylian Mbappé",
     position: "Angriff",
     role: "Stürmer",
-    number: 9,
+    number: 10,
     birthday: "1998-12-20",
     origin: "Frankreich",
     description:
       "Weltklasse-Stürmer mit unfassbarer Geschwindigkeit und Abschlussstärke. Wechselte 2024 zu Real Madrid.",
-    achievements: "Weltmeister 2018, Champions League, mehrere Ligue-1-Titel",
+    achievements: "Weltmeister 2018, 6× Ligue 1 (PSG), 3× Coupe de France, 2× Trophée des Champions, 5× Ligue-1-Torschützenkönig, WM-Torschützenkönig 2022",
     equipmentText: "Schuhe von Nike Mercurial Superfly.",
     equipmentImages: [
       "images/equipment/mbappe-boots.jpg",
@@ -268,7 +332,7 @@ window.PLAYERS = [
       { label: "Nike Mercurial Superfly", url: "https://www.nike.com/" },
       { label: "Instagram", url: "https://www.instagram.com/k.mbappe/" }
     ],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
   },
   {
     id: "rodrygo",
@@ -280,45 +344,124 @@ window.PLAYERS = [
     origin: "Brasilien",
     description:
       "Spielintelligenter, technisch starker Flügelspieler. Bekannt für entscheidende Tore in der Champions League.",
-    achievements: "Champions League, La Liga, Copa America",
+    achievements: "3× Champions League (2018, 2022, 2024), 4× La Liga, 1× Copa del Rey, Copa América 2019",
     equipmentText: "Schuhe von Nike Mercurial.",
     equipmentImages: ["images/equipment/rodrygo-boots.jpg"],
     links: [{ label: "Nike Mercurial", url: "https://www.nike.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "gonzalo",
+    name: "Gonzalo García Torres",
+    position: "Angriff",
+    role: "Stürmer",
+    number: 16,
+    birthday: "2006-01-30",
+    origin: "Spanien",
+    description:
+      "Junges Sturmtalent aus der Cantera von Real Madrid. Torinstinkt und clevere Laufwege zeichnen ihn aus.",
+    achievements: "Aufstieg aus Real Madrid Castilla in den Profikader 2025/26",
+    equipmentText: "Schuhe von adidas.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
   },
   {
     id: "endrick",
     name: "Endrick Felipe",
     position: "Angriff",
     role: "Mittelstürmer",
-    number: 16,
     birthday: "2006-07-21",
     origin: "Brasilien",
     description:
       "Junges Sturmtalent aus Brasilien. Bekannt für Kraft, Abschluss und großes Selbstbewusstsein.",
-    achievements: "Brasilianische Liga, Auswahl-Talente Awards",
+    achievements: "2× Brasileirão (Palmeiras 2022, 2023), 1× Copa do Brasil, Goldener Ball U17-WM 2023",
     equipmentText: "Schuhe von New Balance.",
     equipmentImages: ["images/equipment/endrick-boots.jpg"],
     links: [{ label: "New Balance Football", url: "https://www.newbalance.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-06-15"
+  },
+  {
+    id: "mastantuono",
+    name: "Franco Mastantuono",
+    position: "Angriff",
+    role: "Offensivspieler",
+    number: 30,
+    birthday: "2007-08-07",
+    origin: "Argentinien",
+    description:
+      "Hochtalentierter junger Offensivspieler aus Argentinien. Kam von River Plate und gilt als eines der größten Talente Südamerikas.",
+    achievements: "River Plate: Copa Libertadores Teilnahme, jüngster Torschütze in River Plates Geschichte",
+    equipmentText: "Schuhe von Nike.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-06-15"
   },
 
   // ===== STAFF =====
   {
-    id: "xabi-alonso",
-    name: "Xabi Alonso",
+    id: "arbeloa",
+    name: "Álvaro Arbeloa",
     position: "Staff",
     role: "Cheftrainer",
-    birthday: "1981-11-25",
+    birthday: "1983-01-17",
     origin: "Spanien",
     description:
-      "Ehemalige Madrid-Legende, jetzt als Trainer tätig. Bringt taktische Klarheit und moderne Spielidee.",
+      "Ehemaliger Real-Madrid-Verteidiger und WM-Sieger 2010. Nach erfolgreichen Stationen als Jugend- und Castilla-Trainer übernahm er die Profi-Mannschaft. Bringt tiefes Verständnis für die Vereins-DNA mit.",
     achievements:
-      "Als Spieler: Weltmeister, EM, Champions League. Als Trainer: Bundesliga-Meister mit Leverkusen 2024",
+      "Als Spieler: Weltmeister 2010, EM 2008 & 2012, 1× Champions League (2014), 2× La Liga, 2× Copa del Rey. Als Trainer: Real Madrid Castilla",
     equipmentText: "Trainerausrüstung von adidas.",
     equipmentImages: [],
     links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
-    lastUpdated: "2026-05-04"
+    lastUpdated: "2026-05-11"
+  },
+  {
+    id: "pintus",
+    name: "Antonio Pintus",
+    position: "Staff",
+    role: "Athletiktrainer",
+    birthday: "1962-12-31",
+    origin: "Italien",
+    description:
+      "Italienischer Fitness- und Athletiktrainer mit jahrzehntelanger Erfahrung im Spitzenfußball. Bekannt für seine intensiven, akribischen Trainingsmethoden, die Spieler in Top-Form halten.",
+    achievements:
+      "Mehrere Champions-League-Titel mit Real Madrid (2017, 2018, 2022, 2024), zuvor erfolgreich bei Juventus Turin und Olympique Lyon.",
+    equipmentText: "Trainings- und Analyse-Tools, GPS-Tracker.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-05-11"
+  },
+  {
+    id: "mihic",
+    name: "Niko Mihic",
+    position: "Staff",
+    role: "Cheftherapeut / Physio",
+    birthday: "1969-03-15",
+    origin: "Serbien",
+    description:
+      "Serbischer Mediziner und Leiter der medizinischen Abteilung von Real Madrid. Verantwortlich für Verletzungsbehandlung, Reha-Programme und enge Betreuung der Spieler im Saisonalltag.",
+    achievements:
+      "Mehrjährige Leitung der Medizinabteilung, beteiligt an mehreren CL- und La-Liga-Titeln.",
+    equipmentText: "Medizinische Ausrüstung, Therapie-Geräte, Reha-Tools.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-05-11"
+  },
+  {
+    id: "ortega",
+    name: "Iván Ortega",
+    position: "Staff",
+    role: "Physiotherapeut",
+    birthday: "1980-07-22",
+    origin: "Spanien",
+    description:
+      "Erfahrener Physiotherapeut mit Spezialisierung auf Sportmedizin. Begleitet die Spieler bei täglichen Behandlungen und Reha-Maßnahmen nach Verletzungen.",
+    achievements:
+      "Mehrjährige Tätigkeit im Profi-Fußball, fester Bestandteil des medizinischen Stabes von Real Madrid.",
+    equipmentText: "Manuelle Therapie-Werkzeuge, Tape, Ultraschall.",
+    equipmentImages: [],
+    links: [{ label: "Profil", url: "https://www.realmadrid.com/" }],
+    lastUpdated: "2026-05-11"
   },
   {
     id: "florentino-perez",
@@ -328,8 +471,8 @@ window.PLAYERS = [
     birthday: "1947-03-08",
     origin: "Spanien",
     description:
-      "Langjähriger Präsident von Real Madrid. Verantwortlich für die moderne „Galáctico\"-Ära und den Bernabéu-Umbau.",
-    achievements: "Mehrere Champions-League-Titel als Präsident, Bernabéu-Modernisierung",
+      "Langjähriger Präsident von Real Madrid. Verantwortlich für die moderne Galáctico-Ära und den Bernabéu-Umbau.",
+    achievements: "Als Präsident: 7× Champions League (2000–2024), 6× La Liga, 4× Copa del Rey, Bernabéu-Modernisierung",
     equipmentText: "Im Alltag im Anzug am Bernabéu.",
     equipmentImages: [],
     links: [{ label: "Real Madrid CF", url: "https://www.realmadrid.com/" }],

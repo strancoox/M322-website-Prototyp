@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -30,12 +30,23 @@
   </nav>
 
   <main>
-    <section class="intro">
-      <h2>Der Kader 2025/26</h2>
-      <p>
-        Willkommen auf der inoffiziellen Fanpage von Real Madrid CF. Klicke auf einen Spieler,
-        um sein Profil mit Ausrüstung und Hintergrundinformationen zu öffnen.
-      </p>
+    <!-- HERO mit Slideshow hinter dem Titel -->
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="hero-slides">
+        <div class="hero-slide is-active" style="background-image: url('images/hero/squad.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero/mbappe.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero/bellingham.jpg')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2>Der Kader 2025/26</h2>
+        <p>
+          Willkommen auf der inoffiziellen Fanpage von Real Madrid CF. Klicke auf einen Spieler,
+          um sein Profil mit Ausrüstung und Hintergrundinformationen zu öffnen.
+        </p>
+      </div>
+      <button class="hero-arrow hero-arrow-prev" id="hero-prev" type="button" aria-label="Vorheriges Bild">&#10094;</button>
+      <button class="hero-arrow hero-arrow-next" id="hero-next" type="button" aria-label="Nächstes Bild">&#10095;</button>
     </section>
 
     <!-- Spielerkader wird via JS dynamisch eingefügt -->
