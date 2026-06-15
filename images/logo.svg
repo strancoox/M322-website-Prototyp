@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="47" fill="white" stroke="#c8a826" stroke-width="2"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="#c8a826" stroke-width="0.8"/>
+  <polygon points="50,18 52.6,24.4 60.4,24.6 54.3,29.4 56.5,36.9 50,32.5 43.5,36.9 45.7,29.4 39.6,24.6 47.4,24.4" fill="#c8a826"/>
+  <text x="50" y="68" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#001233" letter-spacing="2">RM</text>
+  <text x="50" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="400" fill="#001233" letter-spacing="2">MADRID</text>
+</svg>
